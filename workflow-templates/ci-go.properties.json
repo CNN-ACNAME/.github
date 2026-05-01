@@ -1,0 +1,7 @@
+{
+  "name": "Go CI",
+  "description": "Build, vet, and test a Go module on every push and pull request.",
+  "iconName": "go",
+  "categories": ["Go"],
+  "filePatterns": ["go.mod$"]
+}
