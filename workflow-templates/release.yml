@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  push:
+    # Triggers on semver tags, e.g. v1.2.3
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history so release notes span all commits since last tag
+
+      # TODO: add your build step here and attach the artifact below, e.g.:
+      # - name: Build
+      #   run: mvn --batch-mode -DskipTests package
+      #
+      # Then pass the artifact path to `gh release create`:
+      #   gh release create "${{ github.ref_name }}" target/*.jar \
+      #     --generate-notes --title "${{ github.ref_name }}"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            --generate-notes \
+            --title "${{ github.ref_name }}"
