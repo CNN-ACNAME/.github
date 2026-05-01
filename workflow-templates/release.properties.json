@@ -1,0 +1,6 @@
+{
+  "name": "Release",
+  "description": "Create a GitHub Release with auto-generated release notes when a semver tag (v*.*.*) is pushed.",
+  "iconName": "package",
+  "categories": ["Deployment"]
+}
