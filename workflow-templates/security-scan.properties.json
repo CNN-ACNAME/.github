@@ -1,0 +1,6 @@
+{
+  "name": "Security Scan",
+  "description": "Dependency review on PRs and weekly CodeQL SAST analysis. Adjust the language matrix for your repo.",
+  "iconName": "shield",
+  "categories": ["Security"]
+}
