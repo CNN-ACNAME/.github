@@ -1,0 +1,7 @@
+{
+  "name": "Python CI",
+  "description": "Lint with Ruff and run pytest on every push and pull request.",
+  "iconName": "python",
+  "categories": ["Python"],
+  "filePatterns": ["requirements.txt$", "pyproject.toml$", "setup.py$", "setup.cfg$"]
+}
